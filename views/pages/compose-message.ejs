@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../partials/head %> 
+<link rel="stylesheet" href="../../public/assets/css/custom_style.css">
+<script type="text/javascript" src="../../public/assets/js/custom_index.js"></script>
+
+<!--TIPS-->
+<!--You may remove all ID or Class names which contain "demo-", they are only used for demonstration. -->
+<body>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+        
+        <% include ../partials/header %> 
+
+        <div class="boxed">
+
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+            <div id="content-container">
+                <div id="page-head">
+                    
+                    <!--Page Title-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <div id="page-title">
+                        <h1 class="page-header text-overflow">Compose Message</h1>
+                    </div>
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End page title-->
+
+
+                    <!--Breadcrumb-->
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <ol class="breadcrumb">
+					<li><a href="#"><i class="demo-pli-home"></i></a></li>
+					<li><a href="#">Messages</a></li>
+					<li class="active">Compose Message</li>
+                    </ol>
+                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                    <!--End breadcrumb-->
+
+                </div>
+
+                
+                <!--Page content-->
+                <!--===================================================-->
+                <div id="page-content">
+                    <div class="panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Write your message</h3>
+                            </div>
+                            <div class="panel-body">
+                        
+                                <form action="message" method="post" class="form-horizontal">
+                                    <input type="hidden" value="<%= sessionObject.username %>" name="sentBy">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                    <label for="sel1">Select Recipient</label>
+                                                    <select name = "sentTo" class="form-control" >
+                                                        <% for(var i=0; i < rows.length; i++) { %>
+                                                        <option name = "sentTo" value="<%= rows[i].username %>"><%= rows[i].fullname %></option>
+                                                        <% } %>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <textarea name="message" placeholder="Message" rows="13" class="form-control"></textarea>
+                                    </div>
+                                    <div class="panel-footer text-right">
+                                        <button class="btn btn-default" type="submit"> message</button>
+                                    </div>
+                                </form>
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--===================================================-->
+                <!--End page content-->
+
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+
+
+
+            
+            <% include ../partials/navbar %> 
+
+        </div>
+
+        
+
+        <% include ../partials/footer %> 
+
+
+       
+
+
+    </div>
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+
+
+    
+    
+    
+    <% include ../partials/scripts %> 
+</body>
+</html>
+

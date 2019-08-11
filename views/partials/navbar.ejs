@@ -1,0 +1,72 @@
+<!--MAIN NAVIGATION-->
+    <!--===================================================-->
+        <nav id="mainnav-container">
+        <div id="mainnav">
+            <!--Menu-->
+            <!--================================-->
+            <div id="mainnav-menu-wrap">
+                <div class="nano">
+                    <div class="nano-content">
+
+                        <!--Profile Widget-->
+                        <!--================================-->
+                        <div id="mainnav-profile" class="mainnav-profile">
+                            <div class="profile-wrap text-center">
+                                <div class="pad-btm">
+                                    <img class="img-circle img-md" src="../../public/assets/img/profile-photos/1.png" alt="Profile Picture">
+                                </div>
+                                <a href="#profile-nav" class="box-block" data-toggle="collapse" aria-expanded="false">
+                                    <p class="mnp-name"><%= sessionObject.fullname %></p>
+                                    <span class="mnp-desc"><%= sessionObject.email %></span>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <ul id="mainnav-menu" class="list-group">
+                
+                            <!--Category name-->
+                            <li class="list-header">Navigation</li>
+
+                            <!--Menu list item-->
+                            <li>
+                                <a href="compose-message">
+                                    <i class="demo-pli-pencil"></i>
+                                    <span class="menu-title">
+                                        Compose Message
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                    <a href="message-system">
+                                        <i class="demo-pli-pencil"></i>
+                                        <span class="menu-title">
+                                            Encryption System
+                                        </span>
+                                    </a>
+                                </li>
+                
+                            <!--Menu list item-->
+                            <li>
+                                <a href="compose-message">
+                                    <i class="demo-pli-mail"></i>
+                                    <span class="menu-title">Messages</span>
+                                    <i class="arrow"></i>
+                                </a>
+                
+                                <!--Submenu-->
+                                <ul class="collapse">
+                                    <li><a href="sent-message">Sent Messages</a></li>
+                                    <li><a href="received-message">Received Messages</a></li>
+                                    
+                                </ul>
+                            </li>
+                
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </nav>
+    <!--===================================================-->
+<!--END MAIN NAVIGATION-->
